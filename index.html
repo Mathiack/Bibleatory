@@ -20,13 +20,16 @@
                 <select name="text-version" id="text-version">
                     <option value="almeida">JFA</option>
                     <option value="kjv">King James</option>
+                    <option value="clementine">Vulgata Clementina</option>
                 </select>
             </div>
         </div>
         <p id="verse-text" class="">Carregando versículo...</p>
         <button id="new-verse" class="button">Novo Versículo</button>
     </div>
-    <script id="script.js"></script>
+    <script id="script.js">
+        window.addEventListener("DOMContentLoaded", fetchRandomVerse);
+    </script>
 </body>
 
 </html>
