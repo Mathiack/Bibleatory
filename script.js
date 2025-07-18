@@ -1,17 +1,18 @@
 async function fetchRandomVerseFromXML() {
-
     const translationField = document.getElementById("text-version");
     const translation = translationField.value;
 
     try {
-        const res = await fetch("bible/por-almeida.usfx.xml"); // arquivo local
+        let res;
 
         if (translation == "almeida") {
             res = await fetch("bible/por-almeida.usfx.xml");
         } else if (translation == "kjv") {
-            res = await fetch("bible/eng-kjv.osis.xml");
+            res = await fetch("bible/eng-kjv.usfx.xml");
+        } else {
+            throw new Error("Tradução inválida ou não especificada.");
         }
-        
+
         const text = await res.text();
         const parser = new DOMParser();
         const xml = parser.parseFromString(text, "text/xml");
@@ -23,13 +24,16 @@ async function fetchRandomVerseFromXML() {
         const chapters = Array.from(randomBook.getElementsByTagName("c"));
         const randomChapter = chapters[Math.floor(Math.random() * chapters.length)];
 
-        const verses = Array.from(randomChapter.getElementsByTagName("v"));
-        const randomVerse = verses[Math.floor(Math.random() * verses.length)];
+        const allVerses = Array.from(xml.getElementsByTagName("v"))
+            .filter(v => v.getAttribute("id") && v.nextElementSibling?.tagName === "ve");
+
+        const randomVerse = allVerses[Math.floor(Math.random() * allVerses.length)];
+        const verseNumber = randomVerse.getAttribute("id");
+
+        // Texto do versículo vem do texto entre <v> e <ve>
+        const verseText = randomVerse.nextSibling?.nodeValue?.trim() || "[verso vazio]";
 
         const chapterNumber = randomChapter.getAttribute("id");
-        const verseNumber = randomVerse.getAttribute("id");
-        const verseText = randomVerse.textContent;
-
         document.getElementById("verse-text").innerText = verseText;
         document.getElementById("verse-ref").innerText = `${bookName} ${chapterNumber}:${verseNumber}`;
 
@@ -40,6 +44,12 @@ async function fetchRandomVerseFromXML() {
     }
 }
 
-// Ativação
 window.addEventListener("DOMContentLoaded", fetchRandomVerseFromXML);
 document.getElementById("new-verse").addEventListener("click", fetchRandomVerseFromXML);
+
+document.addEventListener("keydown", (event) => {
+    if (event.code === "Space") {
+        event.preventDefault();
+        fetchRandomVerse();
+    }
+});
