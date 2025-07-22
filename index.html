@@ -1,35 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Versículo</title>
-    <script defer src="script.js"></script>
-    <link rel="stylesheet" href="styles/palette.css">
-    <link rel="stylesheet" href="styles/style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/styles/styleIndex.css">
 </head>
 
 <body>
-    <div class="main-content">
-        <div class="title-bar">
-            <div>
-                <h1 id="verse-ref"></h1>
+    <main>
+        <section class="chooseSection">
+            <div class="img">
+                <!--imagem futura-->
             </div>
-            <div>
-                <select name="text-version" id="text-version">
-                    <option value="almeida">JFA</option>
-                    <!-- <option value="kjv">King James</option> talvez eu adicione -->
-                    <!-- <option value="clementine">Vulgata Clementina</option> -->
-                </select>
+            <h2>Bíblia</h2>
+            <p>De Gênesis à Apocalipse</p>
+        </section>
+        <section class="chooseSection">
+            <div class="img">
+                <!--imagem futura-->
             </div>
-        </div>
-        <p id="verse-text" class="">Carregando versículo...</p>
-        <button id="new-verse" class="button">Novo Versículo</button>
-    </div>
-    <script id="script.js">
-        window.addEventListener("DOMContentLoaded", fetchRandomVerse);
-    </script>
+            <h2>Versículo Aleatório</h2>
+            <p>Gere um versículo qualquer</p>
+        </section>
+    </main>
 </body>
 
 </html>
