@@ -6,9 +6,9 @@ async function fetchRandomVerseFromXML() {
         let res;
 
         if (translation == "almeida") {
-            res = await fetch("bible/por-almeida.usfx.xml");
+            res = await fetch("../bible/por-almeida.usfx.xml");
         } else if (translation == "kjv") {
-            res = await fetch("bible/eng-kjv.usfx.xml");
+            res = await fetch("../bible/eng-kjv.usfx.xml");
         } else {
             throw new Error("Tradução inválida ou não especificada.");
         }
@@ -50,6 +50,6 @@ document.getElementById("new-verse").addEventListener("click", fetchRandomVerseF
 document.addEventListener("keydown", (event) => {
     if (event.code === "Space") {
         event.preventDefault();
-        fetchRandomVerse();
+        fetchRandomVerseFromXML();
     }
 });

@@ -1,0 +1,31 @@
+/* css para os versículos aleatórios */
+
+body {
+    background-color: var(--background-color-1);
+    color: var(--font-color-2);
+    font-family: "Ubuntu";
+}
+
+.main-content {
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    background-color: var(--background-color-2);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.title-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+select.decorated {
+    background-color: var(--background-color-2);
+    color: var(--font-color-2);
+    border: 1px solid #999999;
+    padding: 3px 8px;
+    border-radius: 5px;
+}

@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200);
 @import url(https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap);
 
 :root {
@@ -10,4 +11,7 @@
     /* cores de texto */
     --font-color-1: #ffffff;
     --font-color-2: #dddddd;
+
+    /* cores para hover */
+    --hover-blue: #6b85b1;
 }
