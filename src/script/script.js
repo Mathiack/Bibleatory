@@ -47,6 +47,14 @@ async function fetchRandomVerseFromXML() {
 window.addEventListener("DOMContentLoaded", fetchRandomVerseFromXML);
 document.getElementById("new-verse").addEventListener("click", fetchRandomVerseFromXML);
 
+document.addEventListener('DOMContentLoaded', () => {
+    const selectElement = document.getElementById('text-version');
+
+    selectElement.addEventListener('change', () => {
+        fetchRandomVerseFromXML();
+    });
+});
+
 document.addEventListener("keydown", (event) => {
     if (event.code === "Space") {
         event.preventDefault();

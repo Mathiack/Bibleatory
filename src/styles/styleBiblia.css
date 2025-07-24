@@ -5,6 +5,13 @@ body {
     font-family: "Ubuntu";
 }
 
+header.decorated {
+    border-bottom: 1px solid var(--border-color-1);
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
 .back-button {
     display: flex;
     align-items: center;
@@ -23,9 +30,50 @@ body {
     border-radius: 5px;
 }
 
-.icon {
+.iconBack {
     font-family: "material symbols outlined";
     font-size: 20px;
+}
+
+.utility-box {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.text-version-box {
+    align-items: center;
+}
+
+select.decorated {
+    background-color: var(--background-color-2);
+    color: var(--font-color-2);
+    border: 1px solid #999999;
+    padding: 3px 8px;
+    border-radius: 5px;
+    height: 35px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+}
+
+.iconSearch {
+    font-family: "material symbols outlined";
+    font-size: 25px;
+}
+
+.search-input-text {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    border-radius: 32px;
+    border: 1px solid #999999;
+    background-color: transparent;
+    color:  white;
+    cursor: pointer;
 }
 
 .container {
@@ -33,8 +81,7 @@ body {
 }
 
 .sidebar {
-    border-right: 1px solid white;
-    border-top: 1px solid white;
+    border-right: 1px solid var(--border-color-1);
     border-radius: 0px 15px 0px 0px;
     width: 220px;
     background-color: var(--primary-100);
