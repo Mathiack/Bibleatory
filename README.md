@@ -1,2 +1,4 @@
 # Bibleatory
-Projeto simples que lista versículos aleatórios da Bíblia.
+Projetinho simples
+
+Estava sem nada para fazer e quis aprender mais CSS e JS, portanto peguei algo simples (ou não)
