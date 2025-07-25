@@ -15,7 +15,7 @@
             <span class="iconBack">arrow_back</span>
             <p>Voltar</p>
         </button>
-        <section class="utility-box"> 
+        <section class="utility-box">
             <div class="text-version-box">
                 <select name="text-version" class="decorated" id="text-version">
                     <option value="almeida">JFA</option>
@@ -24,7 +24,8 @@
             </div>
             <div class="search-box">
                 <span class="iconSearch">search</span>
-                <input type="text" name="search-input-text" class="search-input-text" id="search-input-text" placeholder="Ex.: Joao 1:1">
+                <input type="text" name="search-input-text" class="search-input-text" id="search-input-text"
+                    placeholder="">
             </div>
         </section>
     </header>
@@ -100,11 +101,10 @@
             </ul>
         </aside>
 
-        <script>
-            function loadBook(book) {
-                window.open(`biblia.html?book=${book}`, '_self')
-            }
-        </script>
+        <main id="chapters-container"></main>
+    </div>
+
+    <script src="../script/scriptBiblia.js"></script>
 </body>
 
 </html>

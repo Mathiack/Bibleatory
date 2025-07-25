@@ -20,7 +20,7 @@ header.decorated {
     border-radius: 32px;
     border: 1px solid #999999;
     background-color: transparent;
-    color:  white;
+    color: white;
     cursor: pointer;
     margin-bottom: 10px;
     transition: all .3s;
@@ -57,23 +57,23 @@ select.decorated {
 .search-box {
     display: flex;
     align-items: center;
+    gap: 5px;
+    border-radius: 32px;
+    border: 1px solid #999999;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 .iconSearch {
     font-family: "material symbols outlined";
     font-size: 25px;
+    padding-left: 5px;
 }
 
 .search-input-text {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 10px;
-    border-radius: 32px;
-    border: 1px solid #999999;
+    color: white;
     background-color: transparent;
-    color:  white;
-    cursor: pointer;
+    border: 1px solid transparent;
 }
 
 .container {
@@ -112,4 +112,35 @@ select.decorated {
     margin-left: 240px;
     padding: 2rem;
     flex: 1;
+}
+
+
+/*AAAAAAAAAAAAAAAAA*/
+#chapters-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.chapter-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.chapter-btn {
+    padding: 10px 14px;
+    border: none;
+    background-color: #0055aa;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.chapter-btn:hover {
+    background-color: #003f88;
 }
